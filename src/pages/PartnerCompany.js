@@ -1,0 +1,1 @@
+export default () => "협력업체"

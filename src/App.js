@@ -1,37 +1,31 @@
-import React from 'react';
-import MyComponent from './components/MyComponent';
-import Counter from './components/Counter'
+import React, { useState, useCallback } from 'react';
 import './App.css';
+
 import Categories from './components/Categories';
+import Intro from './pages/Intro'
+import Board from './pages/Board'
+import ConstructionStatus from './pages/ConstructionStatus'
+import PartnerCompany from './pages/PartnerCompany'
 
-class App extends React.Component {
+const App = () =>{
 
-  constructor(props) {
-    super(props);
-    this.state = {
-        username:null
-    };
-  }
+  const [category, setCategory] = useState('intro');
+  const onSelect = useCallback(category => setCategory(category), []);
 
-  componentDidMount() {
-    fetch('api')
-      .then(res=>res.json())
-      .then(data=>this.setState({username: data.username}))
-  }
-
-  render() {
-    const {username} = this.state;
-    return (
-        <div className="App">
-            <Categories />
-          <header className="App-header">
-            {username ? `Hello ${username}` : 'Hello World'}
-            <MyComponent>백</MyComponent>
-            <Counter />
-          </header>
-        </div>
-    );
-  }
+  return (
+      <div className="App">
+          <Categories 
+          category={category} 
+          onSelect={onSelect}
+          />
+        <header className="App-header">
+          {category === 'intro' && <Intro/>}
+          {category === 'constructionStatus' && <ConstructionStatus/>}
+          {category === 'partnerCompany' && <PartnerCompany/>}
+          {category === 'board' && <Board/>}
+        </header>
+      </div>
+  );
 }
 
 export default App;
