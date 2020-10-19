@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types'
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { ITEMS } from '../../services/constants/construction';
 import Table from './Table';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { Wrapper } from './utils';
 
+import { ITEMS } from '../../services/constants/construction';
 
 class ConstructionDetail extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class ConstructionDetail extends Component {
   
   render() {
     const { endpoint, getItems } = this;
-    const { history, match, location, root, id } = this.props;
+    const { history, match, location, root} = this.props;
     const query = { id: match.params.id };
     const { title, description, constructionArea, images, startDate, endDate } = getItems(query);
     const commonProps = {

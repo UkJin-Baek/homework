@@ -23,7 +23,7 @@ function App() {
         <Router>
           <Switch>
             {routes.map((route, index) => <Route key={`AppRoute_${index}`} path={route.path} component={route.render} exact={route.exact}/>)}
-            <Route path='/'component={(props) => <IndexPage { ...props }/>} />
+            <Route path='/' exact={true} component={(props) => <IndexPage { ...props }/>} />
             <Route component={(props) => <div>404</div>} />
           </Switch>
         </Router>

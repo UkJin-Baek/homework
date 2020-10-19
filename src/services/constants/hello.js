@@ -1,0 +1,1 @@
+export const HELLO = '안녕하세요. 백산 전기입니다.'
