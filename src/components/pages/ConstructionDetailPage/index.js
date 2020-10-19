@@ -9,12 +9,11 @@ import Page from '../../layouts/Page'
 class ConstructionDetailPageContainer extends Component {
     render () {
         const { history, location, root, match } = this.props;
-        console.log(match);
         const commonProps = { history, location, root, match }
 
         return (
             <Page {...commonProps}>
-                    <ConstructionDetail { ...commonProps } />
+                <ConstructionDetail { ...commonProps } />
             </Page>
         )
     }

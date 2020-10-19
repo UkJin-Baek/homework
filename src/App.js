@@ -12,20 +12,6 @@ import store from './store'
 
 function App() {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //       username:null
-  //   };
-  // }
-
-  // componentDidMount() {
-  //   fetch('api')
-  //     .then(res=>res.json())
-  //     .then(data=>this.setState({username: data.username}))
-  // }
-
-  // render() {
     const routes = [
       { path: '/construction', exact:true, render: (props) => <ConstructionPage { ...props } /> },
       { path: '/construction/:id', render: (props) => <ConstructionDetailPage { ...props } /> },
@@ -45,7 +31,6 @@ function App() {
       </div>
       </Provider>
     );
-  // }
 }
 
 export default App;

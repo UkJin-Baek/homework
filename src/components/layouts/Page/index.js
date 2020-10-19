@@ -14,7 +14,9 @@ function Page({ paperProps, headerProps, bodyProps, footerProps, children, usedS
   return (
     <Paper {...props}  {...paperProps}>
       <Header {...props} {...headerProps} />
-      {children}
+      <Paper.Content>
+        {children}
+      </Paper.Content>
       <Footer {...props} {...footerProps} />
     </Paper>
   )
