@@ -3,7 +3,7 @@ import {
 	UPLOAD_START,
 	UPLOAD_PROGRESS,
 	UPLOAD_END
-} from '../../Upload/action/';
+} from '../../action/Upload';
 
 const initialState = {
 	rate: 0,

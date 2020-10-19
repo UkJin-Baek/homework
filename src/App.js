@@ -1,37 +1,52 @@
 import React from 'react';
-import MyComponent from './components/MyComponent';
+import { Provider } from 'react-redux'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Counter from './components/Counter'
 import './App.css';
-import Categories from './components/Categories';
 
-class App extends React.Component {
+import ConstructionPage from './components/pages/ConstructionPage'
+import ConstructionDetailPage from './components/pages/ConstructionDetailPage'
+import IndexPage from './components/pages/IndexPage'
 
-  constructor(props) {
-    super(props);
-    this.state = {
-        username:null
-    };
-  }
+import store from './store'
 
-  componentDidMount() {
-    fetch('api')
-      .then(res=>res.json())
-      .then(data=>this.setState({username: data.username}))
-  }
+function App() {
 
-  render() {
-    const {username} = this.state;
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //       username:null
+  //   };
+  // }
+
+  // componentDidMount() {
+  //   fetch('api')
+  //     .then(res=>res.json())
+  //     .then(data=>this.setState({username: data.username}))
+  // }
+
+  // render() {
+    const routes = [
+      
+      { path: '/construction', render: (props) => <ConstructionPage { ...props } /> },
+      { path: '/construction/:id', render: (props) => <ConstructionDetailPage { ...props } /> },
+    ];
+
     return (
-        <div className="App">
-            <Categories />
-          <header className="App-header">
-            {username ? `Hello ${username}` : 'Hello World'}
-            <MyComponent>백</MyComponent>
-            <Counter />
-          </header>
-        </div>
+      <Provider store={store}>
+      <div className="App">
+        <Router>
+          <Switch>
+            {routes.map((route, index) => <Route key={`AppRoute_${index}`} path={route.path} component={route.render} />)}
+            <Route path='/'component={(props) => <IndexPage { ...props }/>} />
+            <Route component={(props) => <div>404</div>} />
+          </Switch>
+        </Router>
+        {/*<Counter />*/}
+      </div>
+      </Provider>
     );
-  }
+  // }
 }
 
 export default App;

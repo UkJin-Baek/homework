@@ -25,7 +25,8 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.3.0",
-    "styled-components": "^5.2.0"
+    "styled-components": "^5.2.0",
+    "styled-theme": "^0.3.3"
   },
   "scripts": {
     "start": "npm-run-all --parallel start:**",
