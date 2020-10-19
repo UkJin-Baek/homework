@@ -27,8 +27,7 @@ function App() {
 
   // render() {
     const routes = [
-      
-      { path: '/construction', render: (props) => <ConstructionPage { ...props } /> },
+      { path: '/construction', exact:true, render: (props) => <ConstructionPage { ...props } /> },
       { path: '/construction/:id', render: (props) => <ConstructionDetailPage { ...props } /> },
     ];
 
@@ -37,7 +36,7 @@ function App() {
       <div className="App">
         <Router>
           <Switch>
-            {routes.map((route, index) => <Route key={`AppRoute_${index}`} path={route.path} component={route.render} />)}
+            {routes.map((route, index) => <Route key={`AppRoute_${index}`} path={route.path} component={route.render} exact={route.exact}/>)}
             <Route path='/'component={(props) => <IndexPage { ...props }/>} />
             <Route component={(props) => <div>404</div>} />
           </Switch>
