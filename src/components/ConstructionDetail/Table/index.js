@@ -14,20 +14,22 @@ const Table = ({
 }) => {
   return (
     <Tab>
-        <Tab.Row>
-            <Tab.Key>위치</Tab.Key>
-            <Tab.Val>{constructionArea.area}</Tab.Val>
-        </Tab.Row>
+        <Tab.Body>
+            <Tab.Row>
+                <Tab.Key>위치</Tab.Key>
+                <Tab.Val>{constructionArea.area}</Tab.Val>
+            </Tab.Row>
 
-        <Tab.Row>
-            <Tab.Key>공사기간</Tab.Key>
-            <Tab.Val>{startDate} ~ {endDate}</Tab.Val>
-        </Tab.Row>
+            <Tab.Row>
+                <Tab.Key>공사기간</Tab.Key>
+                <Tab.Val>{startDate} ~ {endDate}</Tab.Val>
+            </Tab.Row>
 
-        <Tab.Row>
-            <Tab.Key>실적개요</Tab.Key>
-            <Tab.Val>{description}</Tab.Val>
-        </Tab.Row>
+            <Tab.Row>
+                <Tab.Key>실적개요</Tab.Key>
+                <Tab.Val>{description}</Tab.Val>
+            </Tab.Row>
+        </Tab.Body>
     </Tab>
   )
 }

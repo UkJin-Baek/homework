@@ -9,12 +9,13 @@ export const Paper = styled.section`
   background: ${palette('muted', 21)};
 `;
 
-Paper.Content = styled.div`
+Paper.Content = styled.article`
   padding: 1rem;  
   width: 768px;
+  white-space: pre;
   @media only screen and (max-width: 768px) {
-    width: 75%;
+    padding: 0;
+    width: 100%;
     overflow-x: auto;
   }
-  white-space: pre;
 `;

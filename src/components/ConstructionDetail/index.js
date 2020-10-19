@@ -4,7 +4,9 @@ import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ITEMS } from '../../services/constants/construction';
 import Table from './Table';
-import Carousel from './Carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
+import { Wrapper } from './utils';
 
 
 class ConstructionDetail extends Component {
@@ -12,17 +14,44 @@ class ConstructionDetail extends Component {
     super(props)
 
     this.initialState = this.initialState.bind(this);
+    this.initialize = this.initialize.bind(this)
     this.getItems = this.getItems.bind(this);
 
     this.state = this.initialState(props);
   }
 
+  componentDidMount() {
+    this._mounted = true
+    this.initialize()
+  }
+
+  componentDidUpdate(prevProps) {
+    if (!this._mounted) { return }
+    const curProps = this.props
+    if (JSON.stringify(prevProps) !== JSON.stringify(curProps)) { this.setState(this.initialState(curProps), () => null) }
+  }
+
+  componentWillUnmount() {
+    this._mounted = false
+  }
+
   initialState(props = this.props) {
-    const state = { title: '', description: '', area: '', src: '' };
+    const state = { 
+        loading: true, 
+        error: false, 
+        title: '', 
+        description: '', 
+        area: '', 
+        src: '' 
+    };
     return state;
   }
 
-  getItems(query = {}) {
+  initialize() {
+    return this.getItems()
+  }
+
+  getItems(query = {}, cb = () => {}) {
     const component = { ...this , ...query};
     const { state } = component;
     // 추후 데이터 db에서 가져오게 변경 예정
@@ -48,14 +77,17 @@ class ConstructionDetail extends Component {
         startDate,
         endDate
     }
-    const carouselProps = {
-        ...commonProps,
-        images
-    }
     return (
         <>
             <h2>{title}</h2>
-            <Carousel { ...carouselProps }/>
+            <Carousel>
+                {images.map((image, key) =>
+                    <Wrapper key={`Construction_Carousel_${key}`}>
+                        <img src={image.src} alt={image.description}/>
+                        {/* <p className="legend">{image.description}</p> */}
+                    </Wrapper>
+                )}
+            </Carousel>
             <Table { ...tableProps }/>
         </>
     )
@@ -65,7 +97,7 @@ ConstructionDetail.propTypes = {
     history: PropTypes.object,
     location: PropTypes.object,
     root: PropTypes.string,
-    id: PropTypes.number,
+    id: PropTypes.string,
     title: PropTypes.string,
     description: PropTypes.string,
     constructionArea: PropTypes.object,
@@ -78,7 +110,7 @@ ConstructionDetail.defaultProps = {
     history: {},
     location: {},
     root:'',
-    id: -1,
+    id: '',
     title: '',
     description: '',
     constructionArea: {},
