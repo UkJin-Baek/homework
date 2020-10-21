@@ -5,7 +5,7 @@ import './App.css';
 
 import ConstructionPage from './components/pages/ConstructionPage'
 import ConstructionDetailPage from './components/pages/ConstructionDetailPage'
-import IntroPage from './components/pages/IntroPage'
+import PartnerPage from './components/pages/PartnerPage'
 import IndexPage from './components/pages/IndexPage'
 
 import store from './store'
@@ -15,7 +15,7 @@ function App() {
     const routes = [
       { path: '/construction', exact:true, render: (props) => <ConstructionPage { ...props } /> },
       { path: '/construction/:id', render: (props) => <ConstructionDetailPage { ...props } /> },
-      { path: '/intro', render: (props) => <IntroPage { ...props } /> },
+      { path: '/partner', render: (props) => <PartnerPage { ...props } /> },
     ];
 
     return (
