@@ -1,17 +1,18 @@
 import styled from 'styled-components';
 
 export const Notices = styled.div`
-    position: relative; box-sizing: border-box;
-    display: flex; flex-wrap: wrap; z-index: 1;
+    padding: 20px;
 `;
 
 export const Notice = styled.div`
-    width: 25%;
-    overflow: hidden;
-    @media only screen and (max-width: 768px) {
-        width: 50%;
-        overflow-x: auto;
-    }
+    width: 100%;
+    // margin: 10px; 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+    border-top: 2.5px solid #eee; 
+    // a { text-decoration: none; h3 { margin: 0; padding: 0; color: #212121; } 
+    // p { margin: 0; padding: 10px 0 0 0; color: #787878; } 
+    // &:hover { h3 { color: #0066ff; } } }
 `;
 
 Notice.Title = styled.div``;

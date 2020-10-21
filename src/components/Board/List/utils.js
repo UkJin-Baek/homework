@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const Wrapper = styled.div`
+    // background-color: #cf3
     padding: 1rem;    
     width: 768px;
     margin: 0 auto;
@@ -10,4 +11,12 @@ export const Wrapper = styled.div`
     }
 `;
 
-export const Header = styled.div``;
+export const Header = styled.div`
+    // background-color: #cf3
+`;
+
+export const Title = styled.div`
+    text-align: center;
+    font-size: 20px;
+    background-color: #ffff77
+`;

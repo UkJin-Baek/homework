@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { Wrapper, Header } from './utils'
+import { Wrapper, Header, Title } from './utils'
 import NoticeList from './Notice';
+import BoardHeader from '../BoardNav'
 
 export default ({
     history, endpoint, root, match, notices, count
@@ -12,9 +13,8 @@ export default ({
     return (
         <Wrapper>
             <Header>
-                타이틀입니다.
+                <BoardHeader />
             </Header>
-            <div>총 {count}개</div>
             <NoticeList { ...itemsProps }/>
         </Wrapper>
     )

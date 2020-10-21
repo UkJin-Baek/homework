@@ -42,7 +42,7 @@ class BoardDetail extends Component {
     }
     return (
         <>
-        메렁
+        메렁{listProps.num}
         </>
     )
   }

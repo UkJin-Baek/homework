@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Navs, Nav, Wrapper } from './utils'
 
-import { navs } from '../../../../services/constants/nav'
+import { navs } from 'src/services/constants/nav'
 
 class Header extends Component {
 
