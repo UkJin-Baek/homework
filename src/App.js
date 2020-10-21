@@ -6,6 +6,9 @@ import './App.css';
 
 import ConstructionPage from './components/pages/ConstructionPage'
 import ConstructionDetailPage from './components/pages/ConstructionDetailPage'
+import BoardPage from './components/pages/BoardPage'
+import BoardDetailPage from './components/pages/BoardDetailPage'
+
 import IndexPage from './components/pages/IndexPage'
 
 import store from './store'
@@ -29,6 +32,8 @@ function App() {
     const routes = [
       { path: '/construction', exact:true, render: (props) => <ConstructionPage { ...props } /> },
       { path: '/construction/:id', render: (props) => <ConstructionDetailPage { ...props } /> },
+      { path: '/board', exact:true, render: (props) => <BoardPage { ...props } /> },
+      { path: '/board/:id', render: (props) => <BoardDetailPage { ...props } /> }
     ];
 
     return (
