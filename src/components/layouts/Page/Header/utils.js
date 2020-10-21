@@ -2,13 +2,13 @@ import styled from 'styled-components';
 import { font, palette } from 'styled-theme'
 import Link from '../../../utils/Link'
 
-export const Navs = styled.div`
+export const Navs = styled.nav`
     display: flex;
     padding: 1rem;
     width: 768px;
     margin: 0 auto;
     @media only screen and (max-width: 768px) {
-        width: 100%;
+        width: 90%;
         overflow-x: auto;
     }
 `;
@@ -28,4 +28,7 @@ export const Nav = styled(Link)`
     & + & {
         margin-left: 1rem;
     }
+    // @media only screen and (max-width: 768px) {
+    //     font-size: auto;
+    // }
 `;

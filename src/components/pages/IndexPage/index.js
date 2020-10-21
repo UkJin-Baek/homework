@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 
-import Index from '../../MyComponent'
+import Index from '../../Home'
 import Page from '../../layouts/Page'
 
 class IndexPageContainer extends Component {

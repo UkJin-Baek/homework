@@ -3,34 +3,34 @@ import PropTypes from 'prop-types'
 import { Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import ConstructionDetail from '../../ConstructionDetail'
+import Intro from '../../Intro'
 import Page from '../../layouts/Page'
 
-class ConstructionDetailPageContainer extends Component {
+class IntroPageContainer extends Component {
     render () {
         const { history, location, root, match } = this.props;
         const commonProps = { history, location, root, match }
 
         return (
             <Page {...commonProps}>
-                <ConstructionDetail { ...commonProps } />
+                    <Intro { ...commonProps } />
             </Page>
         )
     }
 }
 
-ConstructionDetailPageContainer.propTypes = {
+IntroPageContainer.propTypes = {
     history: PropTypes.object,
     location: PropTypes.object,
     match: PropTypes.object,
     root: PropTypes.string
 }
   
-ConstructionDetailPageContainer.defaultProps = {
+IntroPageContainer.defaultProps = {
     history: {},
     location: {},
     match: {},
     root:''
   }
 
-export default ConstructionDetailPageContainer
+export default IntroPageContainer

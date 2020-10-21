@@ -15,7 +15,7 @@ const CardList = ({history, root, endpoint, items, match}) => {
       {items.map((item, key) =>
         <Card key={`ItemsAsCards_Item_${key}`} onClick={e => [e.stopPropagation(), e.preventDefault(), moveView(item)]}>
           <Card.Thumb>
-            <img className="" src={item.src} alt={'썸네일 이미지'} style={{width: "100%"}}/>
+            <img src={item.images[0].src} alt={'썸네일 이미지'} style={{width: "100%"}}/>
           </Card.Thumb>
           <Card.Title>
             {item.title}
