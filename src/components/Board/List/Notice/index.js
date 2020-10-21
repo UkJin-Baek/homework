@@ -15,7 +15,7 @@ const NoticeList = ({history, root, endpoint, notices, match}) => {
       {notices.map((item, key) =>
         <Notice key={`ItemsAsNotices_Item_${key}`} onClick={e => [e.stopPropagation(), e.preventDefault(), moveView(item)]}>
           <Notice.Title>
-            {item.title}
+            {item.title}No.{item.num}
           </Notice.Title>
           <Notice.Desc>
             {item.description}

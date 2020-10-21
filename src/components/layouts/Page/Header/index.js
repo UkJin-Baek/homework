@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Navs, Nav } from './utils'
 
-import { navs } from '../../../../services/constants/nav'
+import { navs } from 'src/services/constants/nav'
 
 const Header = ({
     history, location, root
