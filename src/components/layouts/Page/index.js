@@ -22,7 +22,6 @@ function Page({ paperProps, headerProps, bodyProps, footerProps, children, usedS
   )
 }
 
-
 Page.propTypes = {
   paperProps: PropTypes.object,
   headerProps: PropTypes.object,
