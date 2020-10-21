@@ -8,8 +8,12 @@ export const Cards = styled.div`
 export const Card = styled.div`
     width: 25%;
     overflow: hidden;
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 992px) {
         width: 50%;
+        overflow-x: auto;
+      }
+    @media only screen and (max-width: 768px) {
+        width: 100%;
         overflow-x: auto;
     }
 `;

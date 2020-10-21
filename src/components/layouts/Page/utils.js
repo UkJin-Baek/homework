@@ -11,8 +11,13 @@ export const Paper = styled.section`
 
 Paper.Content = styled.article`
   padding: 1rem;  
-  width: 768px;
+  width: 70%;
   white-space: pre;
+  @media only screen and (max-width: 992px) {
+    width: 80%;
+    display: list-item;
+    overflow-x: auto;
+  }
   @media only screen and (max-width: 768px) {
     padding: 0;
     width: 100%;

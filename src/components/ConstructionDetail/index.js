@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Table from './Table';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
-import { Wrapper } from './utils';
+import { Wrapper, Title, Square } from './utils';
 
 import { ITEMS } from '../../services/constants/construction';
 
@@ -79,7 +79,7 @@ class ConstructionDetail extends Component {
     }
     return (
         <>
-            <h2>{title}</h2>
+            <Title> <Square/>{title}</Title>
             <Carousel>
                 {images.map((image, key) =>
                     <Wrapper key={`Construction_Carousel_${key}`}>

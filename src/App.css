@@ -1,3 +1,7 @@
+html {
+  font-size: calc(10px + 2vmin);
+}
+
 .App {
   text-align: -webkit-center;
 }
@@ -14,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #343428;
   min-height: 100vh;
   display: flex;
   flex-direction: column;

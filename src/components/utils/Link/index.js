@@ -4,13 +4,9 @@ import styled, { css } from 'styled-components'
 import { font, palette } from 'styled-theme'
 import { NavLink } from 'react-router-dom'
 
-const styles = css`
-  font-family: ${font('primary')}; text-decoration: none; color: ${palette('muted', 1)};
-`
+const StyledNavLink = styled(({ theme, reverse, palette, ...props }) => <NavLink {...props} />)``
 
-const StyledNavLink = styled(({ theme, reverse, palette, ...props }) => <NavLink {...props} />)`${styles}`
-
-const Anchor = styled.a`${styles}`
+const Anchor = styled.a``
 
 const Link = ({ ...props }) => {
   const { to } = props

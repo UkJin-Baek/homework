@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-class Construction extends Component {
+class Partner extends Component {
   constructor(props) {
     super(props)
 
-    this.endpoint = 'construction'
+    this.endpoint = 'partner'
 
     this.initialState = this.initialState.bind(this);
     this.getItems = this.getItems.bind(this);
@@ -38,10 +38,12 @@ class Construction extends Component {
     }
     return (
         <>
-
+            <p>
+                협력업체
+            </p>
         </>
     )
   }
 }
 
-export default Construction
+export default Partner
