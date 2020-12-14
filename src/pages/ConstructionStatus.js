@@ -1,1 +1,0 @@
-export default () => "공사현황"
