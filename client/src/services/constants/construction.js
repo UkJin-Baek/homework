@@ -1,0 +1,9 @@
+export const ITEMS = [
+    { title: '테스트', description: '내용 테스트', constructionArea: {size: 20000, area: '서울'}, startDate: '2020.10.10', endDate: '2020.10.19', images:[{src: '/images/construction/sample.png', description: '0번째'}, {src: '/images/construction/sample.png', description: '1번째'}], id: 1},
+    { title: '테스트', description: '내용 테스트', constructionArea: {size: 20000, area: '서울'}, startDate: '2020.10.10', endDate: '2020.10.19', images:[{src: '/images/construction/sample.png', description: '0번째'}, {src: '/images/construction/sample.png', description: '1번째'}], id: 2},
+    { title: '테스트', description: '내용 테스트', constructionArea: {size: 20000, area: '서울'}, startDate: '2020.10.10', endDate: '2020.10.19', images:[{src: '/images/construction/sample.png', description: '0번째'}, {src: '/images/construction/sample.png', description: '1번째'}], id: 3},
+    { title: '테스트', description: '내용 테스트', constructionArea: {size: 20000, area: '서울'}, startDate: '2020.10.10', endDate: '2020.10.19', images:[{src: '/images/construction/sample.png', description: '0번째'}, {src: '/images/construction/sample.png', description: '1번째'}], id: 4},
+    { title: '테스트', description: '내용 테스트', constructionArea: {size: 20000, area: '서울'}, startDate: '2020.10.10', endDate: '2020.10.19', images:[{src: '/images/construction/sample.png', description: '0번째'}, {src: '/images/construction/sample.png', description: '1번째'}], id: 5},
+    { title: '테스트', description: '내용 테스트', constructionArea: {size: 20000, area: '서울'}, startDate: '2020.10.10', endDate: '2020.10.19', images:[{src: '/images/construction/sample.png', description: '0번째'}, {src: '/images/construction/sample.png', description: '1번째'}], id: 6},
+    { title: '테스트', description: '내용 테스트', constructionArea: {size: 20000, area: '서울'}, startDate: '2020.10.10', endDate: '2020.10.19', images:[{src: '/images/construction/sample.png', description: '0번째'}, {src: '/images/construction/sample.png', description: '1번째'}], id: 7}
+]
